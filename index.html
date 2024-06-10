@@ -1,168 +1,135 @@
 <!DOCTYPE html>
-<html>  
-    
+<html lang="en">
 <head>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Q & A</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Hind+Siliguri&display=swap"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&family=Hind+Siliguri&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="resources/styles.css">
-    <style>
-    
+  <title>Q & A</title>
+  <style>
     body {
-      background: #373B44;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to top, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to top, #4286f4, #373B44);
-      background: #e6e6fa; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      font-family: 'Poppins', sans-serif;
-      margin: 0; /* Remove default body margin */
-  }
-  
-  /* Add these styles for the gradient background to the Home and Blogs sections */
-  #home,
-  #blog {
-      background: none; /* Remove existing background color or image */
-  }
-  
-
-  
-  .title-head {
+      font-size: 20px;
+      background: #2C3E50;
+      text-align: center;
+      padding-top: 30px;
+      margin: 0;
+    }
+    #cardsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      padding: 10px;
+      margin: 10px;
+      width: 300px;
+      background-color: #f9f9f9;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      vertical-align: top;
+    }
+    .title-head {
     color: #5DADE2; /* Keep the color for "Logical Quest" */
     font-family: 'Nunito', sans-serif; /* Use the font family for "Our Blogs" */
     font-weight: 700;
     font-size: 40px;
 }
-.about {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    color: #ffffff;
-    text-align: center; /* Align the "About Us" text to the left */
-}
+    .card1 {
+      background-color: #f9f9f9;
+    }
+    .card2 {
+      background-color: #e6e6e6;
+    }
+    .subjectName {
+      color: #4682B4;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
 
-.contact {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    color: #ffffff;
-    text-align: center; /* Align the "About Us" text to the left */
-}
-  
-.info {
-    color: #ffffff;
-    text-align: left; /* Align the "About Us" text to the left */
-}
-  
-  .card-body-head {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: 100%;
-  }
-  
-  .title-head {
-      color: #2471A3;
-  }
-  
-  .title-text {
-      font-size: 18px;
-  }
-  .about-text {
-      font-size: 18px;
-  }
-  .card-body {
-      justify-content: center;
-      align-items: center;
-  }
-  
-  .card-text {
-      text-align: justify;
-  }
-  
-  .card-title {
-      justify-content: left;
-      text-align: left;
-  }
-  
-  .title {
+    .subjectNamea {
+      color: #DC143C;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+    .difference {
+      color: #DC143C;
+      font-size: 35px;
+      padding: 0px;
+      height: 0px;
       font-family: 'Nunito', sans-serif;
-      font-size: 40px;
       font-weight: 700;
-      color: #5DADE2;
-  }
-  .titleo {
+      margin: 0;
+    }
+    .button {
+      background: #4169E1;
+      border-radius: 999px;
+      box-shadow: #4169E1 0 10px 20px -10px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
       font-family: 'Nunito', sans-serif;
-      color: #5DADE2;
-  }
-
-  
-  a {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      opacity: 1;
+      outline: 0 solid transparent;
+      padding: 8px 18px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: fit-content;
+      word-break: break-word;
+      border: 0;
       text-decoration: none;
-  }
-  .profile-card-img-top {
-      width: 100%;
-      border-radius:5%;
-      margin: 0 auto;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      position: relative;
-      top: 100px;
-      z-index: 1;
-  }
-    
-  .profile-card {
-      padding: 6.5em 0.5em 0.5em;
-      text-align: center;
-      border-radius: 2em;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
-  }
-    
-  .profile-card-title {
-      font-family: 'Nunito', sans-serif;
-      font-weight: bold;
-      font-size: 1.5em;
-      text-align: left;
-      color: #002fff;
-  }
-    
-  .profile-card-text {
-      text-align: left;
-  }
-    
-  .contact-text {
-      text-align: left;
-  }
-    
-  .btn-primary {
-      border-radius: 2em;
-      
-  }
-  
-  .profile-holder {
-      margin: -80px 0 0 0;
-  }
-  .view-all-button {
-      border-radius: 2em;
-  }
-  .resources-bg {
-      background-color: rgb(234, 235, 238);
-      text-align: center;
-      border-radius: 2em;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-  }
-  
-  .blogs-bg {
-      background-color: rgb(234, 235, 238);
-  }
-  
-  footer {
+    }
+    .button:hover {
+      background-color: #27408B;
+      box-shadow: #27408B 0 10px 20px -10px;
+    } 
+    .titleo {
+      color: white;
+    }
+    @media screen and (max-width: 768px) {
+      body {
+        padding-top: 10px;
+      }
+      .card {
+        width: 90%;
+        margin: 10px auto;
+      }
+      .subjectName, .difference {
+        font-size: 23px;
+      }
+      .button {
+        font-size: 22px;
+        padding: 8px 16px;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      #cardsContainer {
+        display: block;
+      }
+      .card {
+        width: 90%;
+        margin: 10px auto;
+      }
+      .subjectName, .difference {
+        font-size: 22px;
+      }
+      .button {
+        font-size: 21px;
+        padding: 6px 12px;
+      }
+    }
+
+    footer {
       background-color: #060533;
       color: #f5f5f5;
       padding: 20px 0;
@@ -249,6 +216,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--text-color-light);
 }
+
 .nav-link:hover {
   color: blue; /* Change the color to blue when hovering */
 }
@@ -262,19 +230,18 @@
 }
 
 
-
 @media (min-width: 893px) {
   .embedded-video-16-9 {
     width: 45vw; /* Sets the width of the video to 45% of the viewport width for screen widths equal to or larger than 893px */
     height: 25.3125vw; /* Sets the height of the video to 25.3125% of the viewport width (maintaining 16:9 aspect ratio) for screen widths equal to or larger than 893px */
   }
 }
-  
   </style>
-  </head>
 </head>
-    
 <body>
+
+
+
 
  <!-- Navbar -->
  <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -297,7 +264,7 @@
                   <a class="nav-link" href="#advisors" target="_self">𝐄𝐧𝐫𝐨𝐥𝐥</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="https://logical-quest.github.io/QnA/" target="_self">𝐐 & 𝐀</a>
+                  <a class="nav-link" href="https://logical-quest.github.io/Student-QnA/" target="_self">𝐐 & 𝐀</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#members" target="_self">𝐄𝐱𝐚𝐦</a>
@@ -310,90 +277,85 @@
     </div>
   </nav>
 
-        <br>
 
 
 
-    <div>
-                  <div class="card-body card-body-head">
-                    <h1 class="card-title title-head">24 x 7</h1>
-
-                  </div></div>
 
 
-        <div class="container">
-          <div class="row">
 
-            <div class="col-lg-3 col-md-4 p-3 text-center">
-              <ul class="list-group">
-                <li class="list-group-item text-bg-dark"><h2>𝐐 & 𝐀 (𝐇𝐒𝐂)</h2></li>
-                
-                <li class="list-group-item">A͏c͏a͏d͏e͏m͏i͏c͏ & A͏d͏m͏i͏s͏s͏i͏o͏n͏</li>
-                <a href="https://logical-quest.github.io/Q-A-HSC/" target="_self" class="list-group-item list-group-item-action text-primary">𝐄𝐧𝐭𝐞𝐫</a>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-4 p-3 text-center">
-              <ul class="list-group">
-                <li class="list-group-item text-bg-dark"><h2>𝐐 & 𝐀 (𝐒𝐒𝐂)</h2></li>
-                <li class="list-group-item">A͏c͏a͏d͏e͏m͏i͏c͏ & A͏d͏m͏i͏s͏s͏i͏o͏n͏</li>
-                <a href="#" class="list-group-item list-group-item-action text-primary">𝐄𝐧𝐭𝐞𝐫</a>
-              </ul>
-            </div>
-           
-            
-            
-              
 
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+ <br> <div>
+    <div class="card-body card-body-head">
+      <h1 class="card-title title-head">Q & A</h1>
+
+    </div></div>
+
+  <div id="cardsContainer">
+    <div class="card card1">
+      <div class="subjectName">𝐇𝐒𝐂 (𝐀𝐜𝐚𝐝𝐞𝐦𝐢𝐜)</div><br>
+      <div class="subjectNamea">𝟐𝟒/𝟕</div>
+      <a href="https://logical-quest.github.io/Q-A-HSC/" target="_self" class="button">𝐄𝐧𝐭𝐞𝐫</a><br><br>
+    </div>
+    <div class="card card2">
+      <div class="subjectName">𝐕𝐚𝐫𝐬𝐢𝐭𝐲 𝐀𝐝𝐦𝐢𝐬𝐬𝐢𝐨𝐧</div><br>
+      <div class="subjectNamea">𝟐𝟒/𝟕</div>
+      <a href="https://logical-quest.github.io/Q-A-HSC/" target="_self" class="button">𝐄𝐧𝐭𝐞𝐫</a><br><br>
+    </div>
+    <div class="card card2">
+        <div class="subjectName">𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠 𝐀𝐝𝐦𝐢𝐬𝐬𝐢𝐨𝐧</div><br>
+        <div class="subjectNamea">𝟐𝟒/𝟕</div>
+      <a href="https://logical-quest.github.io/Q-A-HSC/" target="_self" class="button">𝐄𝐧𝐭𝐞𝐫</a><br><br>
+      </div>
+  </div>
+
+  <br><br><br><br><footer>
+    <div class="container">
+      <div class="row">          
+    
+        <div class="col-lg-4 col-sm-12" style="text-align: left;">
+          <h2 class="contact"></h2>
+        </div>
+    
+        <div class="col-lg-4 col-sm-12" style="text-align: left;">
+          <p></p>
+          <p></p>
         </div>
 
+        
+    
       </div>
     </div>
-        
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br>
-        <footer>
-          <div class="container">
-            <div class="row">          
           
-              <div class="col-lg-4 col-sm-12" style="text-align: left;">
-                <h2 class="contact"></h2>
-              </div>
           
-              <div class="col-lg-4 col-sm-12" style="text-align: left;">
-                <p></p>
-                <p></p>
-              </div>
-
-              
+  
+        <div class="footer-links">
           
-            </div>
-          </div>
-                
-                
-        
-              <div class="footer-links">
-                
-                
-                𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 &copy; 𝐋𝐨𝐠𝐢𝐜𝐚𝐥 𝐐𝐮𝐞𝐬𝐭 | 𝟐𝟎𝟐𝟒<br>
-              </div>
-            </div>
-          </div>
-        </footer>
+          
+          𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 &copy; 𝐋𝐨𝐠𝐢𝐜𝐚𝐥 𝐐𝐮𝐞𝐬𝐭 | 𝟐𝟎𝟐𝟒<br>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-        <a href="#" class="scrollup" id="scroll-up">
-          <i class="uil uil-arrow-up scrollup__icon"></i>
-      </a>
-        
-        
-        
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="resources/script.js"></script>
-
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class="uil uil-arrow-up scrollup__icon"></i>
+</a>
+  
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="resources/script.js"></script>
 </body>
-    
-    
 </html>
